@@ -15,7 +15,7 @@ player.getVideoTitle().then(function(title) {
 
 player.on('timeupdate', throttle(currentTime, 250));
 
- player.setCurrentTime(JSON.parse(localStorage.getItem("videoplayer-current-time"))|| 0);
+ player.setCurrentTime(JSON.parse(localStorage.getItem("videoplayer-current-time"))|| "");
 
 function currentTime(data) {
     console.log('Seconds watched:', data.seconds);
